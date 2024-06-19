@@ -1,0 +1,481 @@
+{
+  "version": "1.4.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": 40,
+          "y": -90
+        },
+        "caption": "READ"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": -287.9845336239382,
+          "y": -238.69838919854885
+        },
+        "caption": "LOBE"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": -50.21724315170145,
+          "y": -328.49379485367666
+        },
+        "caption": "SUBJ"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": -491.7399381108753,
+          "y": -190.6461637034132
+        },
+        "caption": "SIDE"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 176.03015216382042,
+          "y": 149.15642935595073
+        },
+        "caption": "ALPHA"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 312.21315177632397,
+          "y": -130
+        },
+        "caption": "GAMMA"
+      },
+      {
+        "id": "n6",
+        "position": {
+          "x": 263.740048994729,
+          "y": 32.30630246000034
+        },
+        "caption": "DELTA"
+      },
+      {
+        "id": "n7",
+        "position": {
+          "x": 263.740048994729,
+          "y": -287.5635475140776
+        },
+        "caption": "THETA"
+      },
+      {
+        "id": "n8",
+        "position": {
+          "x": 9.329504779509854,
+          "y": 183.4215074256776
+        },
+        "caption": "BETA"
+      },
+      {
+        "id": "n9",
+        "position": {
+          "x": -350.15105643184137,
+          "y": -46.28533193025217
+        },
+        "caption": "CHAN"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n2",
+        "type": "READ_FOR",
+        "fromId": "n0",
+        "toId": "n2"
+      },
+      {
+        "id": "n3",
+        "type": "POWER",
+        "fromId": "n0",
+        "toId": "n4"
+      },
+      {
+        "id": "n4",
+        "type": "POWER",
+        "fromId": "n0",
+        "toId": "n5"
+      },
+      {
+        "id": "n5",
+        "type": "POWER",
+        "fromId": "n0",
+        "toId": "n6"
+      },
+      {
+        "id": "n7",
+        "type": "POWER",
+        "fromId": "n0",
+        "toId": "n7"
+      },
+      {
+        "id": "n8",
+        "type": "POWER",
+        "fromId": "n0",
+        "toId": "n8"
+      },
+      {
+        "id": "n9",
+        "type": "READ_AT",
+        "fromId": "n0",
+        "toId": "n9"
+      },
+      {
+        "id": "n10",
+        "type": "NEIGHBOUR",
+        "fromId": "n9",
+        "toId": "n9"
+      },
+      {
+        "id": "n11",
+        "type": "LOC_AT",
+        "fromId": "n9",
+        "toId": "n3"
+      },
+      {
+        "id": "n12",
+        "type": "LOC_AT",
+        "fromId": "n9",
+        "toId": "n1"
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "1.4.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:n0",
+            "token": "READ",
+            "properties": []
+          },
+          {
+            "$id": "nl:n1",
+            "token": "LOBE",
+            "properties": []
+          },
+          {
+            "$id": "nl:n2",
+            "token": "SUBJ",
+            "properties": []
+          },
+          {
+            "$id": "nl:n3",
+            "token": "SIDE",
+            "properties": []
+          },
+          {
+            "$id": "nl:n4",
+            "token": "ALPHA",
+            "properties": []
+          },
+          {
+            "$id": "nl:n5",
+            "token": "GAMMA",
+            "properties": []
+          },
+          {
+            "$id": "nl:n6",
+            "token": "DELTA",
+            "properties": []
+          },
+          {
+            "$id": "nl:n7",
+            "token": "THETA",
+            "properties": []
+          },
+          {
+            "$id": "nl:n8",
+            "token": "BETA",
+            "properties": []
+          },
+          {
+            "$id": "nl:n9",
+            "token": "CHAN",
+            "properties": []
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:n2",
+            "token": "READ_FOR",
+            "properties": []
+          },
+          {
+            "$id": "rt:n3",
+            "token": "POWER",
+            "properties": []
+          },
+          {
+            "$id": "rt:n4",
+            "token": "POWER",
+            "properties": []
+          },
+          {
+            "$id": "rt:n5",
+            "token": "POWER",
+            "properties": []
+          },
+          {
+            "$id": "rt:n7",
+            "token": "POWER",
+            "properties": []
+          },
+          {
+            "$id": "rt:n8",
+            "token": "POWER",
+            "properties": []
+          },
+          {
+            "$id": "rt:n9",
+            "token": "READ_AT",
+            "properties": []
+          },
+          {
+            "$id": "rt:n10",
+            "token": "NEIGHBOUR",
+            "properties": []
+          },
+          {
+            "$id": "rt:n11",
+            "token": "LOC_AT",
+            "properties": []
+          },
+          {
+            "$id": "rt:n12",
+            "token": "LOC_AT",
+            "properties": []
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:n0",
+            "labels": [
+              {
+                "$ref": "#nl:n0"
+              }
+            ]
+          },
+          {
+            "$id": "n:n1",
+            "labels": [
+              {
+                "$ref": "#nl:n1"
+              }
+            ]
+          },
+          {
+            "$id": "n:n2",
+            "labels": [
+              {
+                "$ref": "#nl:n2"
+              }
+            ]
+          },
+          {
+            "$id": "n:n3",
+            "labels": [
+              {
+                "$ref": "#nl:n3"
+              }
+            ]
+          },
+          {
+            "$id": "n:n4",
+            "labels": [
+              {
+                "$ref": "#nl:n4"
+              }
+            ]
+          },
+          {
+            "$id": "n:n5",
+            "labels": [
+              {
+                "$ref": "#nl:n5"
+              }
+            ]
+          },
+          {
+            "$id": "n:n6",
+            "labels": [
+              {
+                "$ref": "#nl:n6"
+              }
+            ]
+          },
+          {
+            "$id": "n:n7",
+            "labels": [
+              {
+                "$ref": "#nl:n7"
+              }
+            ]
+          },
+          {
+            "$id": "n:n8",
+            "labels": [
+              {
+                "$ref": "#nl:n8"
+              }
+            ]
+          },
+          {
+            "$id": "n:n9",
+            "labels": [
+              {
+                "$ref": "#nl:n9"
+              }
+            ]
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:n2",
+            "type": {
+              "$ref": "#rt:n2"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n2"
+            }
+          },
+          {
+            "$id": "r:n3",
+            "type": {
+              "$ref": "#rt:n3"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n4"
+            }
+          },
+          {
+            "$id": "r:n4",
+            "type": {
+              "$ref": "#rt:n4"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n5"
+            }
+          },
+          {
+            "$id": "r:n5",
+            "type": {
+              "$ref": "#rt:n5"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n6"
+            }
+          },
+          {
+            "$id": "r:n7",
+            "type": {
+              "$ref": "#rt:n7"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n7"
+            }
+          },
+          {
+            "$id": "r:n8",
+            "type": {
+              "$ref": "#rt:n8"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n8"
+            }
+          },
+          {
+            "$id": "r:n9",
+            "type": {
+              "$ref": "#rt:n9"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n9"
+            }
+          },
+          {
+            "$id": "r:n10",
+            "type": {
+              "$ref": "#rt:n10"
+            },
+            "from": {
+              "$ref": "#n:n9"
+            },
+            "to": {
+              "$ref": "#n:n9"
+            }
+          },
+          {
+            "$id": "r:n11",
+            "type": {
+              "$ref": "#rt:n11"
+            },
+            "from": {
+              "$ref": "#n:n9"
+            },
+            "to": {
+              "$ref": "#n:n3"
+            }
+          },
+          {
+            "$id": "r:n12",
+            "type": {
+              "$ref": "#rt:n12"
+            },
+            "from": {
+              "$ref": "#n:n9"
+            },
+            "to": {
+              "$ref": "#n:n1"
+            }
+          }
+        ],
+        "constraints": [],
+        "indexes": []
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": []
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "unset",
+        "tableSchemas": []
+      },
+      "nodeMappings": [],
+      "relationshipMappings": []
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
