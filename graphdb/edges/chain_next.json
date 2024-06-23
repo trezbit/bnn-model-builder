@@ -1,0 +1,308 @@
+{
+    "chain_next": [
+      {
+        "FromID": 102,
+        "ToID": 105,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 105,
+        "ToID": 111,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 2
+      },
+      {
+        "FromID": 111,
+        "ToID": 122,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 2
+      },
+      {
+        "FromID": 122,
+        "ToID": 133,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 2
+      },
+      {
+        "FromID": 133,
+        "ToID": 144,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 2
+      },
+      {
+        "FromID": 144,
+        "ToID": 155,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 2
+      },
+      {
+        "FromID": 155,
+        "ToID": 165,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 2
+      },
+      {
+        "FromID": 165,
+        "ToID": 170,
+        "Type": "RT",
+        "Name": "Temporal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 102,
+        "ToID": 106,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 106,
+        "ToID": 113,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 113,
+        "ToID": 124,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 124,
+        "ToID": 135,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 135,
+        "ToID": 146,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 146,
+        "ToID": 157,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 157,
+        "ToID": 166,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 166,
+        "ToID": 170,
+        "Type": "RP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 107,
+        "ToID": 115,
+        "Type": "CC",
+        "Name": "Central",
+        "Orientation": 0,
+        "Align": 0
+      },
+      {
+        "FromID": 115,
+        "ToID": 126,
+        "Type": "CC",
+        "Name": "Central",
+        "Orientation": 0,
+        "Align": 0
+      },
+      {
+        "FromID": 126,
+        "ToID": 137,
+        "Type": "CC",
+        "Name": "Central",
+        "Orientation": 0,
+        "Align": 0
+      },
+      {
+        "FromID": 137,
+        "ToID": 148,
+        "Type": "CC",
+        "Name": "Central",
+        "Orientation": 0,
+        "Align": 0
+      },
+      {
+        "FromID": 148,
+        "ToID": 159,
+        "Type": "CC",
+        "Name": "Central",
+        "Orientation": 0,
+        "Align": 0
+      },
+      {
+        "FromID": 159,
+        "ToID": 167,
+        "Type": "CC",
+        "Name": "Central",
+        "Orientation": 0,
+        "Align": 0
+      },
+      {
+        "FromID": 104,
+        "ToID": 109,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 1
+      },
+      {
+        "FromID": 109,
+        "ToID": 119,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 2
+      },
+      {
+        "FromID": 119,
+        "ToID": 130,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 2
+      },
+      {
+        "FromID": 130,
+        "ToID": 141,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 2
+      },
+      {
+        "FromID": 141,
+        "ToID": 152,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 2
+      },
+      {
+        "FromID": 152,
+        "ToID": 163,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 2
+      },
+      {
+        "FromID": 163,
+        "ToID": 169,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 2
+      },
+      {
+        "FromID": 169,
+        "ToID": 172,
+        "Type": "LT",
+        "Name": "Temporal",
+        "Orientation": 2,
+        "Align": 1
+      },
+      {
+        "FromID": 104,
+        "ToID": 108,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 108,
+        "ToID": 117,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 117,
+        "ToID": 128,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 128,
+        "ToID": 139,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 139,
+        "ToID": 150,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 150,
+        "ToID": 161,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 161,
+        "ToID": 168,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      },
+      {
+        "FromID": 168,
+        "ToID": 172,
+        "Type": "LP",
+        "Name": "Parasagittal",
+        "Orientation": 1,
+        "Align": 1
+      }
+    ]
+}

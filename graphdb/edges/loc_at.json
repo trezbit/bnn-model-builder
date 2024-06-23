@@ -1,0 +1,369 @@
+{
+  "channels_at_location": [
+    {
+      "FromID": 101,
+      "ToID": 11,
+      "Orientation": 0
+    },
+    {
+      "FromID": 102,
+      "ToID": 12,
+      "Orientation": 1
+    },
+    {
+      "FromID": 103,
+      "ToID": 12,
+      "Orientation": 0
+    },
+    {
+      "FromID": 104,
+      "ToID": 12,
+      "Orientation": 2
+    },
+    {
+      "FromID": 105,
+      "ToID": 13,
+      "Orientation": 1
+    },
+    {
+      "FromID": 106,
+      "ToID": 13,
+      "Orientation": 1
+    },
+    {
+      "FromID": 107,
+      "ToID": 13,
+      "Orientation": 0
+    },
+    {
+      "FromID": 108,
+      "ToID": 13,
+      "Orientation": 2
+    },
+    {
+      "FromID": 109,
+      "ToID": 13,
+      "Orientation": 2
+    },
+    {
+      "FromID": 110,
+      "ToID": 12,
+      "Orientation": 1
+    },
+    {
+      "FromID": 111,
+      "ToID": 12,
+      "Orientation": 1
+    },
+    {
+      "FromID": 112,
+      "ToID": 12,
+      "Orientation": 1
+    },
+    {
+      "FromID": 113,
+      "ToID": 12,
+      "Orientation": 1
+    },
+    {
+      "FromID": 114,
+      "ToID": 12,
+      "Orientation": 1
+    },
+    {
+      "FromID": 115,
+      "ToID": 12,
+      "Orientation": 0
+    },
+    {
+      "FromID": 116,
+      "ToID": 12,
+      "Orientation": 2
+    },
+    {
+      "FromID": 117,
+      "ToID": 12,
+      "Orientation": 2
+    },
+    {
+      "FromID": 118,
+      "ToID": 12,
+      "Orientation": 2
+    },
+    {
+      "FromID": 119,
+      "ToID": 12,
+      "Orientation": 2
+    },
+    {
+      "FromID": 120,
+      "ToID": 12,
+      "Orientation": 0
+    },
+    {
+      "FromID": 121,
+      "ToID": 14,
+      "Orientation": 1
+    },
+    {
+      "FromID": 122,
+      "ToID": 14,
+      "Orientation": 1
+    },
+    {
+      "FromID": 123,
+      "ToID": 15,
+      "Orientation": 1
+    },
+    {
+      "FromID": 124,
+      "ToID": 15,
+      "Orientation": 1
+    },
+    {
+      "FromID": 125,
+      "ToID": 15,
+      "Orientation": 1
+    },
+    {
+      "FromID": 126,
+      "ToID": 15,
+      "Orientation": 0
+    },
+    {
+      "FromID": 127,
+      "ToID": 15,
+      "Orientation": 2
+    },
+    {
+      "FromID": 128,
+      "ToID": 15,
+      "Orientation": 2
+    },
+    {
+      "FromID": 129,
+      "ToID": 15,
+      "Orientation": 2
+    },
+    {
+      "FromID": 130,
+      "ToID": 14,
+      "Orientation": 2
+    },
+    {
+      "FromID": 131,
+      "ToID": 14,
+      "Orientation": 0
+    },
+    {
+      "FromID": 132,
+      "ToID": 16,
+      "Orientation": 1
+    },
+    {
+      "FromID": 133,
+      "ToID": 17,
+      "Orientation": 1
+    },
+    {
+      "FromID": 134,
+      "ToID": 18,
+      "Orientation": 1
+    },
+    {
+      "FromID": 135,
+      "ToID": 18,
+      "Orientation": 1
+    },
+    {
+      "FromID": 136,
+      "ToID": 18,
+      "Orientation": 1
+    },
+    {
+      "FromID": 137,
+      "ToID": 18,
+      "Orientation": 0
+    },
+    {
+      "FromID": 138,
+      "ToID": 18,
+      "Orientation": 2
+    },
+    {
+      "FromID": 139,
+      "ToID": 18,
+      "Orientation": 2
+    },
+    {
+      "FromID": 140,
+      "ToID": 18,
+      "Orientation": 2
+    },
+    {
+      "FromID": 141,
+      "ToID": 17,
+      "Orientation": 2
+    },
+    {
+      "FromID": 142,
+      "ToID": 19,
+      "Orientation": 2
+    },
+    {
+      "FromID": 143,
+      "ToID": 20,
+      "Orientation": 1
+    },
+    {
+      "FromID": 144,
+      "ToID": 20,
+      "Orientation": 1
+    },
+    {
+      "FromID": 145,
+      "ToID": 21,
+      "Orientation": 1
+    },
+    {
+      "FromID": 146,
+      "ToID": 21,
+      "Orientation": 1
+    },
+    {
+      "FromID": 147,
+      "ToID": 21,
+      "Orientation": 1
+    },
+    {
+      "FromID": 148,
+      "ToID": 21,
+      "Orientation": 0
+    },
+    {
+      "FromID": 149,
+      "ToID": 21,
+      "Orientation": 2
+    },
+    {
+      "FromID": 150,
+      "ToID": 21,
+      "Orientation": 2
+    },
+    {
+      "FromID": 151,
+      "ToID": 21,
+      "Orientation": 2
+    },
+    {
+      "FromID": 152,
+      "ToID": 20,
+      "Orientation": 2
+    },
+    {
+      "FromID": 153,
+      "ToID": 20,
+      "Orientation": 0
+    },
+    {
+      "FromID": 154,
+      "ToID": 22,
+      "Orientation": 1
+    },
+    {
+      "FromID": 155,
+      "ToID": 22,
+      "Orientation": 1
+    },
+    {
+      "FromID": 156,
+      "ToID": 22,
+      "Orientation": 1
+    },
+    {
+      "FromID": 157,
+      "ToID": 22,
+      "Orientation": 1
+    },
+    {
+      "FromID": 158,
+      "ToID": 22,
+      "Orientation": 1
+    },
+    {
+      "FromID": 159,
+      "ToID": 22,
+      "Orientation": 0
+    },
+    {
+      "FromID": 160,
+      "ToID": 22,
+      "Orientation": 2
+    },
+    {
+      "FromID": 161,
+      "ToID": 22,
+      "Orientation": 2
+    },
+    {
+      "FromID": 162,
+      "ToID": 22,
+      "Orientation": 2
+    },
+    {
+      "FromID": 163,
+      "ToID": 22,
+      "Orientation": 2
+    },
+    {
+      "FromID": 164,
+      "ToID": 22,
+      "Orientation": 0
+    },
+    {
+      "FromID": 165,
+      "ToID": 23,
+      "Orientation": 1
+    },
+    {
+      "FromID": 166,
+      "ToID": 23,
+      "Orientation": 1
+    },
+    {
+      "FromID": 167,
+      "ToID": 23,
+      "Orientation": 0
+    },
+    {
+      "FromID": 168,
+      "ToID": 23,
+      "Orientation": 2
+    },
+    {
+      "FromID": 169,
+      "ToID": 23,
+      "Orientation": 2
+    },
+    {
+      "FromID": 170,
+      "ToID": 24,
+      "Orientation": 1
+    },
+    {
+      "FromID": 171,
+      "ToID": 24,
+      "Orientation": 0
+    },
+    {
+      "FromID": 172,
+      "ToID": 24,
+      "Orientation": 2
+    },
+    {
+      "FromID": 173,
+      "ToID": 25,
+      "Orientation": 0
+    }
+  ]
+}

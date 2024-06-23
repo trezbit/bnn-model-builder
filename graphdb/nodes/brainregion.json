@@ -1,0 +1,64 @@
+{
+    "brainregions": [
+        {
+          "ID": 13,
+          "Name": "Anterior Frontal"
+        },
+        {
+          "ID": 18,
+          "Name": "Central"
+        },
+        {
+          "ID": 21,
+          "Name": "Centro-Parietal"
+        },
+        {
+          "ID": 12,
+          "Name": "Frontal Polar"
+        },
+        {
+          "ID": 14,
+          "Name": "Frontal Temporal"
+        },
+        {
+          "ID": 15,
+          "Name": "Fronto-Central"
+        },
+        {
+          "ID": 25,
+          "Name": "Inion"
+        },
+        {
+          "ID": 16,
+          "Name": "Left Preauricular"
+        },
+        {
+          "ID": 11,
+          "Name": "Nasian"
+        },
+        {
+          "ID": 24,
+          "Name": "Occipital"
+        },
+        {
+          "ID": 22,
+          "Name": "Parietal"
+        },
+        {
+          "ID": 23,
+          "Name": "Parieto-Occipital"
+        },
+        {
+          "ID": 19,
+          "Name": "Right Preauricular"
+        },
+        {
+          "ID": 17,
+          "Name": "Temporal"
+        },
+        {
+          "ID": 20,
+          "Name": "Temporal Posterior"
+        }
+    ]
+}

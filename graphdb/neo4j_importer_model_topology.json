@@ -1,0 +1,675 @@
+{
+  "version": "2.0.0-beta.0",
+  "visualisation": {
+    "nodes": [
+      {
+        "id": "n:1",
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "id": "n:2",
+        "position": {
+          "x": 2,
+          "y": 220.5
+        }
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "1.4.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:1",
+            "token": "BRAINREG",
+            "properties": [
+              {
+                "$id": "p:1",
+                "token": "ID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:2",
+                "token": "Name",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:2",
+            "token": "CHANNEL",
+            "properties": [
+              {
+                "$id": "p:3",
+                "token": "ID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:4",
+                "token": "Name",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:5",
+                "token": "AbsDist",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:6",
+                "token": "Lattitude",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:7",
+                "token": "CircM0",
+                "type": {
+                  "type": "boolean"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:8",
+                "token": "CircM1",
+                "type": {
+                  "type": "boolean"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:9",
+                "token": "Ref_Y",
+                "type": {
+                  "type": "boolean"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:10",
+                "token": "Ref_X",
+                "type": {
+                  "type": "boolean"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:11",
+                "token": "REF_Pole",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:1",
+            "token": "LOC_AT",
+            "properties": [
+              {
+                "$id": "p:12",
+                "token": "Orientation",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:13",
+                "token": "FromID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:14",
+                "token": "ToID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "rt:2",
+            "token": "CHAIN",
+            "properties": [
+              {
+                "$id": "p:15",
+                "token": "FromID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:16",
+                "token": "ToID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:17",
+                "token": "Type",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:18",
+                "token": "Name",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:19",
+                "token": "Orientation",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:20",
+                "token": "Align",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:1",
+            "labels": [
+              {
+                "$ref": "#nl:1"
+              }
+            ]
+          },
+          {
+            "$id": "n:2",
+            "labels": [
+              {
+                "$ref": "#nl:2"
+              }
+            ]
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:1",
+            "type": {
+              "$ref": "#rt:1"
+            },
+            "from": {
+              "$ref": "#n:2"
+            },
+            "to": {
+              "$ref": "#n:1"
+            }
+          },
+          {
+            "$id": "r:2",
+            "type": {
+              "$ref": "#rt:2"
+            },
+            "from": {
+              "$ref": "#n:2"
+            },
+            "to": {
+              "$ref": "#n:2"
+            }
+          }
+        ],
+        "constraints": [
+          {
+            "$id": "c:1",
+            "name": "ID_BRAINREG_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:1"
+              }
+            ]
+          },
+          {
+            "$id": "c:2",
+            "name": "ID_CHANNEL_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:2"
+            },
+            "properties": [
+              {
+                "$ref": "#p:3"
+              }
+            ]
+          }
+        ],
+        "indexes": [
+          {
+            "$id": "i:1",
+            "name": "ID_BRAINREG_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:1"
+              }
+            ]
+          },
+          {
+            "$id": "i:2",
+            "name": "ID_CHANNEL_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:2"
+            },
+            "properties": [
+              {
+                "$ref": "#p:3"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": [
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "keyProperty": {
+            "$ref": "#p:1"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "keyProperty": {
+            "$ref": "#p:3"
+          }
+        }
+      ]
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "local/csv",
+        "tableSchemas": [
+          {
+            "$id": "t:1",
+            "name": "node.channel.csv",
+            "expanded": false,
+            "fields": [
+              {
+                "name": "ID",
+                "type": "integer",
+                "sample": "101",
+                "include": true
+              },
+              {
+                "name": "Name",
+                "type": "string",
+                "sample": "Nz",
+                "include": true
+              },
+              {
+                "name": "AbsDist",
+                "type": "integer",
+                "sample": "0",
+                "include": true
+              },
+              {
+                "name": "Lattitude",
+                "type": "integer",
+                "sample": "0",
+                "include": true
+              },
+              {
+                "name": "CircM0",
+                "type": "boolean",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "CircM1",
+                "type": "boolean",
+                "sample": "0",
+                "include": true
+              },
+              {
+                "name": "Ref_Y",
+                "type": "boolean",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "Ref_X",
+                "type": "boolean",
+                "sample": "0",
+                "include": true
+              },
+              {
+                "name": "REF_Pole",
+                "type": "string",
+                "sample": "Nz",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:2",
+            "name": "node.region.csv",
+            "expanded": false,
+            "fields": [
+              {
+                "name": "ID",
+                "type": "integer",
+                "sample": "13",
+                "include": true
+              },
+              {
+                "name": "Name",
+                "type": "string",
+                "sample": "Anterior Frontal",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:3",
+            "name": "edge.chain.csv",
+            "expanded": false,
+            "fields": [
+              {
+                "name": "FromID",
+                "type": "integer",
+                "sample": "102",
+                "include": true
+              },
+              {
+                "name": "ToID",
+                "type": "integer",
+                "sample": "105",
+                "include": true
+              },
+              {
+                "name": "Type",
+                "type": "string",
+                "sample": "RT",
+                "include": true
+              },
+              {
+                "name": "Name",
+                "type": "string",
+                "sample": "Temporal",
+                "include": true
+              },
+              {
+                "name": "Orientation",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "Align",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:4",
+            "name": "edge.loc_at.csv",
+            "expanded": false,
+            "fields": [
+              {
+                "name": "FromID",
+                "type": "integer",
+                "sample": "101",
+                "include": true
+              },
+              {
+                "name": "ToID",
+                "type": "integer",
+                "sample": "11",
+                "include": true
+              },
+              {
+                "name": "Orientation",
+                "type": "integer",
+                "sample": "0",
+                "include": true
+              }
+            ]
+          }
+        ]
+      },
+      "nodeMappings": [
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "tableSchema": {
+            "$ref": "#t:2"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "ID",
+              "property": {
+                "$ref": "#p:1"
+              }
+            },
+            {
+              "fieldName": "Name",
+              "property": {
+                "$ref": "#p:2"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "ID",
+              "property": {
+                "$ref": "#p:3"
+              }
+            },
+            {
+              "fieldName": "Name",
+              "property": {
+                "$ref": "#p:4"
+              }
+            },
+            {
+              "fieldName": "AbsDist",
+              "property": {
+                "$ref": "#p:5"
+              }
+            },
+            {
+              "fieldName": "Lattitude",
+              "property": {
+                "$ref": "#p:6"
+              }
+            },
+            {
+              "fieldName": "CircM0",
+              "property": {
+                "$ref": "#p:7"
+              }
+            },
+            {
+              "fieldName": "CircM1",
+              "property": {
+                "$ref": "#p:8"
+              }
+            },
+            {
+              "fieldName": "Ref_Y",
+              "property": {
+                "$ref": "#p:9"
+              }
+            },
+            {
+              "fieldName": "Ref_X",
+              "property": {
+                "$ref": "#p:10"
+              }
+            },
+            {
+              "fieldName": "REF_Pole",
+              "property": {
+                "$ref": "#p:11"
+              }
+            }
+          ]
+        }
+      ],
+      "relationshipMappings": [
+        {
+          "relationship": {
+            "$ref": "#r:1"
+          },
+          "tableSchema": {
+            "$ref": "#t:4"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "Orientation",
+              "property": {
+                "$ref": "#p:12"
+              }
+            },
+            {
+              "fieldName": "FromID",
+              "property": {
+                "$ref": "#p:13"
+              }
+            },
+            {
+              "fieldName": "ToID",
+              "property": {
+                "$ref": "#p:14"
+              }
+            }
+          ],
+          "fromMapping": {
+            "fieldName": "FromID"
+          },
+          "toMapping": {
+            "fieldName": "ToID"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:2"
+          },
+          "tableSchema": {
+            "$ref": "#t:3"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "FromID",
+              "property": {
+                "$ref": "#p:15"
+              }
+            },
+            {
+              "fieldName": "ToID",
+              "property": {
+                "$ref": "#p:16"
+              }
+            },
+            {
+              "fieldName": "Type",
+              "property": {
+                "$ref": "#p:17"
+              }
+            },
+            {
+              "fieldName": "Name",
+              "property": {
+                "$ref": "#p:18"
+              }
+            },
+            {
+              "fieldName": "Orientation",
+              "property": {
+                "$ref": "#p:19"
+              }
+            },
+            {
+              "fieldName": "Align",
+              "property": {
+                "$ref": "#p:20"
+              }
+            }
+          ],
+          "fromMapping": {
+            "fieldName": "FromID"
+          },
+          "toMapping": {
+            "fieldName": "ToID"
+          }
+        }
+      ]
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}

@@ -13,16 +13,19 @@ class NodeType(Enum):
         self.modelpath = modelpath
         self.arraykey = arraykey
 
-    SIDE='SIDE', cypher.LOAD_SIDE, includes.MODEL_JSON_NODES + "/sides.json", 'sides'
-    LOBE='LOBE', cypher.LOAD_LOBE, includes.MODEL_JSON_NODES + "/lobes.json", 'lobes'
-    CHANNEL='CHAN', cypher.LOAD_CHANNEL, includes.MODEL_JSON_NODES + "/channels.json", 'channels'
-    READS='READ', cypher.LOAD_READ, includes.MODEL_JSON_NODES + "/reads.json", 'reads'
-    SUBJECT='SUBJ', cypher.LOAD_SUBJECT, includes.MODEL_JSON_NODES + "/subjects.json", 'subjects'
-    ALPHA='ALPHA', cypher.LOAD_ALPHA, includes.MODEL_JSON_NODES + "/alpha_powers.json", 'alpha_powers'
+    # Topology nodes
+
+    BRAINREG='BRAINREG', cypher.LOAD_BRAINREG, includes.MODEL_JSON_NODES + "/brainregion.json", 'brainregions'
+    CHANNEL='CHANNEL', cypher.LOAD_CHANNEL, includes.MODEL_JSON_NODES + "/channel.json", 'channels'
+    
+    # EEG Data Set nodes
+    READS='READ', cypher.LOAD_READ, includes.MODEL_JSON_NODES + "/read.json", 'reads'
+    SUBJECT='SUBJ', cypher.LOAD_SUBJECT, includes.MODEL_JSON_NODES + "/subject.json", 'subjects'
+    ALPHA='ALPHA', cypher.LOAD_ALPHA, includes.MODEL_JSON_NODES + "/alpha_power.json", 'alpha_powers'
     BETA='BETA', cypher.LOAD_BETA, includes.MODEL_JSON_NODES + "/beta_powers.json", 'beta_powers'
-    THETA='THETA', cypher.LOAD_THETA, includes.MODEL_JSON_NODES + "/theta_powers.json", 'theta_powers'
-    DELTA='DELTA', cypher.LOAD_BETA, includes.MODEL_JSON_NODES + "/delta_powers.json", 'delta_powers'
-    GAMMA='GAMMA', cypher.LOAD_GAMMA, includes.MODEL_JSON_NODES + "/gamma_powers.json", 'gamma_powers'
+    THETA='THETA', cypher.LOAD_THETA, includes.MODEL_JSON_NODES + "/theta_power.json", 'theta_powers'
+    DELTA='DELTA', cypher.LOAD_BETA, includes.MODEL_JSON_NODES + "/delta_power.json", 'delta_powers'
+    GAMMA='GAMMA', cypher.LOAD_GAMMA, includes.MODEL_JSON_NODES + "/gamma_power.json", 'gamma_powers'
 
 class RelationType(Enum):
     '''Model relation type enumeration'''
@@ -34,10 +37,13 @@ class RelationType(Enum):
         self.birectional = birectional
 
     # Directed relations
+
+    # Topology relations
+    LOC_AT='LOC_AT',  cypher.LOAD_LOCATED_AT, includes.MODEL_JSON_RELATIONS + "/loc_at.json", 'channels_at_location', True
+    CHAIN_NEXT='CHAIN_NEXT',  cypher.LOAD_CHAIN, includes.MODEL_JSON_RELATIONS + "/chain_next.json", 'chain_next', True
+
+    # EEG Data Set relations
     READ_FOR='READ_FOR', cypher.LOAD_READ_FOR, includes.MODEL_JSON_RELATIONS + "/read_for.json", 'reads_for_subject', True
     READ_AT='READ_AT',  cypher.LOAD_READ_AT, includes.MODEL_JSON_RELATIONS + "/read_at.json", 'reads_at_channel', True
-    LOC_AT='LOC_AT',  cypher.LOAD_LOCATED_AT, includes.MODEL_JSON_RELATIONS + "/located_at.json", 'channels_at_location', True
-    ABSOLUTE_POWER='POWER',  cypher.LOAD_ABSOLUTE_POWER, includes.MODEL_JSON_RELATIONS + "/absolute_power.json", 'reads_absolute_power', True
+    ABS_POWER='ABS_POWER',  cypher.LOAD_ABSOLUTE_POWER, includes.MODEL_JSON_RELATIONS + "/absolute_power.json", 'reads_absolute_power', True
 
-    # birectional relation: NEIGHBOUR
-    NEIGHBOUR='NEIGHBOUR',  cypher.LOAD_CHANNEL_NEIGHBORS, includes.MODEL_JSON_RELATIONS + "/assesses.json", 'assesses', False
