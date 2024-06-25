@@ -37,7 +37,7 @@ LOAD_BRAINREG="""
 LOAD_CHANNEL="""
     LOAD CSV WITH HEADERS FROM '""" +  inc.PUBLIC_GRAPH_DATA_ROOT + """/node.channel.csv'
     AS row WITH row
-    WHERE NOT row.`ID` IN $idsToSkip AND NOT toInteger(trim(row.`ID`)) IS NULL
+    WHERE NOT toInteger(trim(row.`ID`)) IS NULL
     CALL {
        WITH row
   	   MERGE (n: `CHANNEL` { `ID`: toInteger(trim(row.`ID`)) })
@@ -80,4 +80,36 @@ LOAD_CHAIN_NEXT="""
       SET r.`Orientation` = toInteger(trim(row.`Orientation`))
       SET r.`Align` = toInteger(trim(row.`Align`))
     } IN TRANSACTIONS OF 10000 ROWS;
+"""
+
+LOAD_READ="""
+"""
+
+LOAD_SUBJECT="""
+"""
+
+
+LOAD_WAVE="""
+LOAD CSV WITH HEADERS FROM '""" +  inc.PUBLIC_GRAPH_DATA_ROOT + """/node.wave.csv'
+AS row WITH row
+WHERE NOT toInteger(trim(row.`ID`)) IS NULL
+CALL {
+  WITH row
+  MERGE (n: `WAVE` { `ID`: toInteger(trim(row.`ID`)) })
+  SET n.`ID` = toInteger(trim(row.`ID`))
+  SET n.`Name` = row.`Name`
+  SET n.`Range_Min` = toInteger(trim(row.`Range_Min`))
+  SET n.`Range_Max` = toInteger(trim(row.`Range_Max`))
+} IN TRANSACTIONS OF 10000 ROWS;
+"""
+
+
+
+LOAD_READ_AT="""
+"""
+
+LOAD_READ_FOR="""
+"""
+
+LOAD_ABSOLUTE_POWER="""
 """
