@@ -35,7 +35,9 @@ def parse_args():
     convertgroup2.add_argument('--topo'
                                , help='Build Ref Topology Graph'
                                , nargs='?', const='{}', type=str)
-    
+    convertgroup2.add_argument('--study'
+                               , help='Build EEG Reads Study Graph'
+                               , nargs='?', const='{}', type=str)
     convertgroup2.add_argument('--eegreads'
                                , help='Build EEG Reads Graph'
                                , nargs='?', const='{}', type=str)
@@ -58,6 +60,8 @@ def run_session (args):
         test_neo4j(args.neo4j)
     elif (args.command == 'build' and args.topo is not None):
         processor.GraphProcessor().build_topology_graph()
+    elif (args.command == 'build' and args.study is not None):
+        processor.GraphProcessor().build_eegstudy_subgraph()
     elif (args.command == 'build' and args.eegreads is not None):
         processor.GraphProcessor().extract_study_model()
     elif (args.command == 'build' and args.export is not None):

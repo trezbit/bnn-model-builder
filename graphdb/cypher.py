@@ -91,9 +91,29 @@ LOAD_CHAIN_NEXT="""
 """
 
 LOAD_READ="""
+LOAD CSV WITH HEADERS FROM '""" +  inc.PUBLIC_GRAPH_DATA_ROOT + """/node.read.csv'
+AS row WITH row
+WHERE NOT toInteger(trim(row.`ID`)) IS NULL
+CALL {
+  WITH row
+  MERGE (n: `READ` { `ID`: toInteger(trim(row.`ID`)) })
+  SET n.`ID` = toInteger(trim(row.`ID`))
+  SET n.`Name` = row.`Name`
+  SET n.`ReadMode` = row.`ReadMode`
+} IN TRANSACTIONS OF 10000 ROWS;
 """
 
 LOAD_SUBJECT="""
+LOAD CSV WITH HEADERS FROM '""" +  inc.PUBLIC_GRAPH_DATA_ROOT + """/node.subject.csv'
+AS row WITH row
+WHERE NOT toInteger(trim(row.`ID`)) IS NULL
+CALL {
+  WITH row
+  MERGE (n: `SUBJECT` { `ID`: toInteger(trim(row.`ID`)) })
+  SET n.`ID` = toInteger(trim(row.`ID`))
+  SET n.`Name` = row.`Name`
+  SET n.`PainMarker` = toLower(trim(row.`PainMarker`)) IN ['1','true','yes']
+} IN TRANSACTIONS OF 10000 ROWS;
 """
 
 
@@ -114,10 +134,49 @@ CALL {
 
 
 LOAD_READ_AT="""
+LOAD CSV WITH HEADERS FROM '""" +  inc.PUBLIC_GRAPH_DATA_ROOT + """/edge.read_at.csv'
+AS row WITH row
+CALL {
+  WITH row
+  MATCH (source: `READ` { `ID`: toInteger(trim(row.`FromID`)) })
+  MATCH (target: `CHANNEL` { `ID`: toInteger(trim(row.`ToID`)) })
+  MERGE (source)-[r: `READ_AT`]->(target)
+  SET r.`FromID` = toInteger(trim(row.`FromID`))
+  SET r.`ToID` = toInteger(trim(row.`ToID`))
+} IN TRANSACTIONS OF 10000 ROWS;
+
 """
 
 LOAD_READ_FOR="""
+LOAD CSV WITH HEADERS FROM '""" +  inc.PUBLIC_GRAPH_DATA_ROOT + """/edge.read_for.csv'
+AS row WITH row
+CALL {
+  WITH row
+  MATCH (source: `READ` { `ID`: toInteger(trim(row.`FromID`)) })
+  MATCH (target: `SUBJECT` { `ID`: toInteger(trim(row.`ToID`)) })
+  MERGE (source)-[r: `READ_FOR`]->(target)
+  SET r.`FromID` = toInteger(trim(row.`FromID`))
+  SET r.`ToID` = toInteger(trim(row.`ToID`))
+} IN TRANSACTIONS OF 10000 ROWS;
 """
 
 LOAD_ABSOLUTE_POWER="""
+LOAD CSV WITH HEADERS FROM '""" +  inc.PUBLIC_GRAPH_DATA_ROOT + """/edge.abs_power.csv'
+AS row WITH row
+CALL {
+  WITH row
+  MATCH (source: `READ` { `ID`: toInteger(trim(row.`FromID`)) })
+  MATCH (target: `WAVE` { `ID`: toInteger(trim(row.`ToID`)) })
+  MERGE (source)-[r: `ABS_POWER`]->(target)
+  SET r.`FromID` = toInteger(trim(row.`FromID`))
+  SET r.`ToID` = toInteger(trim(row.`ToID`))
+  SET r.`Weight` = toFloat(trim(row.`Weight`))
+} IN TRANSACTIONS OF 10000 ROWS;
 """
+
+
+
+
+
+
+

@@ -42,7 +42,6 @@ class GraphProcessor():
         self.build_node(NodeType.CHANNEL)
         self.build_relation(RelationType.LOC_AT)
         self.build_relation(RelationType.CHAIN_NEXT)
-
         self.build_node(NodeType.WAVE)
         return
     
@@ -68,7 +67,13 @@ class GraphProcessor():
     
     def build_eegstudy_subgraph(self, params={}):
         '''Main method for building the EEG READ graph with study subjects, channels, and Absolute Powers nodes and relations'''
-        print("Build EEG Study Subgraph")     
+        print("Build EEG Study Subgraph")
+        self.cleanup_study_graph()
+        self.build_node(NodeType.SUBJECT)
+        self.build_node(NodeType.READS)
+        self.build_relation(RelationType.READ_FOR)
+        self.build_relation(RelationType.READ_AT)
+        self.build_relation(RelationType.ABS_POWER)
         return
     
 
