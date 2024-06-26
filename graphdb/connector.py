@@ -57,4 +57,12 @@ class NEO4JConnector(object):
             except Neo4jError as e:
                 print("Error in cleanup: " + str(e))
 
+    def cleanup_study(self):
+        '''Cleanup the study database'''
+        with self.driver.session() as session:
+            try:
+                session.run(cypher.CLEANUP_STUDY_GRAPH)
+            except Neo4jError as e:
+                print("Error in cleanup: " + str(e))
+
             

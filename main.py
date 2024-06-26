@@ -1,7 +1,9 @@
 '''Main entry point for the application'''
 import argparse
-import os
+
 import graphdb.connector as conn
+import graphdb.processor as processor
+
 
 
 def test_neo4j(params):
@@ -37,6 +39,10 @@ def parse_args():
     convertgroup2.add_argument('--eegreads'
                                , help='Build EEG Reads Graph'
                                , nargs='?', const='{}', type=str)
+    
+    convertgroup2.add_argument('--export'
+                               , help='Export EEG Study Subgraph to CSV'
+                               , nargs='?', const='{}', type=str)
 
     builder.add_argument('--debug', help='Log/Data structures output', type=str, required=False)
 
@@ -51,9 +57,11 @@ def run_session (args):
     elif (args.command == 'test' and args.neo4j is not None):
         test_neo4j(args.neo4j)
     elif (args.command == 'build' and args.topo is not None):
-        print("Topology builder not implemented.")
-    elif (args.command == 'build' and args.plain is not None):
-        print("EEG Reads graph builder not implemented.")
+        processor.GraphProcessor().build_topology_graph()
+    elif (args.command == 'build' and args.eegreads is not None):
+        processor.GraphProcessor().extract_study_model()
+    elif (args.command == 'build' and args.export is not None):
+        processor.GraphProcessor().export_study_subgraph()
     else:
         print("Unknown utility test command option for: "    , args.command)
     print("\nEnd of demo session...", args.command)

@@ -9,6 +9,14 @@ CLEANUP_GRAPH = """
 	DELETE n,r
 """
 
+CLEANUP_STUDY_GRAPH = """
+	MATCH (m:READ)
+	OPTIONAL MATCH (m)-[r1:READ_FOR]-(s:SUBJECT)
+    OPTIONAL MATCH (m)-[r2:READ_AT]-()
+    OPTIONAL MATCH (m)-[r3:ABS_POWER]-()
+	DELETE m,s,r1,r2,r3;
+"""
+
 # Create constraints & indices
 
 CREATE_CONSTRAINT ="""CREATE CONSTRAINT id___LABEL___uniq IF NOT EXISTS FOR (n: __LABEL__) REQUIRE (n.`id`) IS UNIQUE;"""

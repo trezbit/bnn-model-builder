@@ -21,7 +21,9 @@ class NodeType(Enum):
 
     # EEG Data Set nodes
     READS='READ', cypher.LOAD_READ, includes.MODEL_JSON_NODES + "/read.json", 'reads'
-    SUBJECT='SUBJ', cypher.LOAD_SUBJECT, includes.MODEL_JSON_NODES + "/subject.json", 'subjects'
+    SUBJECT='SUBJECT', cypher.LOAD_SUBJECT, includes.MODEL_JSON_NODES + "/subject.json", 'subjects'
+
+
 
 
 class RelationType(Enum):
@@ -44,3 +46,24 @@ class RelationType(Enum):
     READ_AT='READ_AT',  cypher.LOAD_READ_AT, includes.MODEL_JSON_RELATIONS + "/read_at.json", 'reads_at_channel', True
     ABS_POWER='ABS_POWER',  cypher.LOAD_ABSOLUTE_POWER, includes.MODEL_JSON_RELATIONS + "/absolute_power.json", 'reads_absolute_power', True
 
+
+
+class WaveType(Enum):
+    """Model Wave Type enumeration"""
+    def __init__(self, idref):
+        self.idref = idref
+    # Wave types
+    ALPHA=10
+    BETA=20
+    DELTA=30
+    THETA=40
+    GAMMA=50
+
+
+class EEGReadMode(Enum):
+    """Model EEG Read Type enumeration"""
+    def __init__(self, description):
+        self.description = description
+    # EEG Read types
+    EC="Eyes Closed"
+    EO="Eyes Open"

@@ -30,3 +30,5 @@ STUDY_DATA = {
     "cpCGX_BIDS": {"loc": STUDY_CHRONIC_PAIN, "pain": True},
     "EEG_MPILMBB_LEMON": {"loc": STUDY_CONTROL_LEMON, "pain": False}
 }
+
+
