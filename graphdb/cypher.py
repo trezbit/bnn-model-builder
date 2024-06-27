@@ -58,6 +58,7 @@ LOAD_CHANNEL="""
        SET n.`Ref_Y` = toLower(trim(row.`Ref_Y`)) IN ['1','true','yes']
        SET n.`Ref_X` = toLower(trim(row.`Ref_X`)) IN ['1','true','yes']
        SET n.`REF_Pole` = row.`REF_Pole`
+       SET n.`Study_Common` = toLower(trim(row.`Study_Common`)) IN ['1','true','yes']
     } IN TRANSACTIONS OF 10000 ROWS;
 """
 LOAD_LOC_AT="""
