@@ -69,6 +69,7 @@ LOAD_LOC_AT="""
       MATCH (source: `CHANNEL` { `ID`: toInteger(trim(row.`FromID`)) })
       MATCH (target: `BRAINREG` { `ID`: toInteger(trim(row.`ToID`)) })
       MERGE (source)-[r: `LOC_AT`]->(target)
+      SET r.`Type` = 'LOC_AT'
       SET r.`Orientation` = toInteger(trim(row.`Orientation`))
       SET r.`FromID` = toInteger(trim(row.`FromID`))
       SET r.`ToID` = toInteger(trim(row.`ToID`))
@@ -82,9 +83,10 @@ LOAD_CHAIN_NEXT="""
       MATCH (source: `CHANNEL` { `ID`: toInteger(trim(row.`FromID`)) })
       MATCH (target: `CHANNEL` { `ID`: toInteger(trim(row.`ToID`)) })
       MERGE (source)-[r: `CHAIN`]->(target)
+      SET r.`Type` = 'CHAIN'
       SET r.`FromID` = toInteger(trim(row.`FromID`))
       SET r.`ToID` = toInteger(trim(row.`ToID`))
-      SET r.`Type` = row.`Type`
+      SET r.`ChainType` = row.`Type`
       SET r.`Name` = row.`Name`
       SET r.`Orientation` = toInteger(trim(row.`Orientation`))
       SET r.`Align` = toInteger(trim(row.`Align`))
@@ -142,6 +144,7 @@ CALL {
   MATCH (source: `READ` { `ID`: toInteger(trim(row.`FromID`)) })
   MATCH (target: `CHANNEL` { `ID`: toInteger(trim(row.`ToID`)) })
   MERGE (source)-[r: `READ_AT`]->(target)
+  SET r.`Type` = 'READ_AT'
   SET r.`FromID` = toInteger(trim(row.`FromID`))
   SET r.`ToID` = toInteger(trim(row.`ToID`))
 } IN TRANSACTIONS OF 10000 ROWS;
@@ -156,6 +159,7 @@ CALL {
   MATCH (source: `READ` { `ID`: toInteger(trim(row.`FromID`)) })
   MATCH (target: `SUBJECT` { `ID`: toInteger(trim(row.`ToID`)) })
   MERGE (source)-[r: `READ_FOR`]->(target)
+  SET r.`Type` = 'READ_FOR'
   SET r.`FromID` = toInteger(trim(row.`FromID`))
   SET r.`ToID` = toInteger(trim(row.`ToID`))
 } IN TRANSACTIONS OF 10000 ROWS;
@@ -169,6 +173,7 @@ CALL {
   MATCH (source: `READ` { `ID`: toInteger(trim(row.`FromID`)) })
   MATCH (target: `WAVE` { `ID`: toInteger(trim(row.`ToID`)) })
   MERGE (source)-[r: `ABS_POWER`]->(target)
+  SET r.`Type` = 'ABS_POWER'
   SET r.`FromID` = toInteger(trim(row.`FromID`))
   SET r.`ToID` = toInteger(trim(row.`ToID`))
   SET r.`Weight` = toFloat(trim(row.`Weight`))

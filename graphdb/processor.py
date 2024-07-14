@@ -59,7 +59,7 @@ class GraphProcessor():
     
     def build_relation(self, reltype:RelationType):
         '''Main method for building relations for batch upload'''
-        print("Build Relations -  Type: ", reltype)
+        print("Build Relations -  Type: ", reltype.load)
         self.connector.run_query(reltype.load)
 
         return

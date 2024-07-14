@@ -19,10 +19,10 @@ def test_neo4j(params):
 
 def parse_args():
     '''CLI Argument parser for the application'''
-    parser = argparse.ArgumentParser(description='BrainNet (BN) graph db build utilities and queries')
+    parser = argparse.ArgumentParser(description='BRAINGNNet Graph DB build utilities and queries')
     subparser = parser.add_subparsers(dest='command')
 
-    tester = subparser.add_parser('test', help='(BN) tester utilities for Neo4j')
+    tester = subparser.add_parser('test', help='BRAINGNNet tester utilities for Neo4j')
     builder = subparser.add_parser('build', help='EEG read, channels and topology build utilities')
 
 
@@ -36,17 +36,17 @@ def parse_args():
                                , help='Build Ref Topology Graph'
                                , nargs='?', const='{}', type=str)
     convertgroup2.add_argument('--study'
-                               , help='Build EEG Reads Study Graph'
+                               , help='Build EEG Study Graph'
                                , nargs='?', const='{}', type=str)
     convertgroup2.add_argument('--eegreads'
-                               , help='Build EEG Reads Graph'
+                               , help='Build EEG Reads as JSON'
                                , nargs='?', const='{}', type=str)
     
     convertgroup2.add_argument('--export'
                                , help='Export EEG Study Subgraph to CSV'
                                , nargs='?', const='{}', type=str)
 
-    builder.add_argument('--debug', help='Log/Data structures output', type=str, required=False)
+    # builder.add_argument('--debug', help='Log/Data structures output', type=str, required=False)
 
     args = parser.parse_args()
     return args
