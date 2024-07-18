@@ -52,6 +52,15 @@ For a comparative analysis of Control (MBB-LEMON) and Chronic Pain (cpCGX-BIDS) 
 - Jupyter core packages: jupyter_core     : 5.7.2, jupyter_server   : 2.14.1jupyterlab       : 4.2.3
 - Active [Neo4J - Aura](https://neo4j.com/cloud/platform/aura-graph-database/) free-tier subscription for prototype graph database access and deployment
 
+*Environment Variables:*
+
+Following runtime environment variables should set for Neo4J Connectivity:
+
+```
+export NEO4J_URI='neo4j+s://<YOURINSTANCEID>.databases.neo4j.io'
+export NEO4J_USER='neo4j'
+export NEO4J_PASSWORD='<YOURINSTANCEPWD>'
+```
 
 
 ## Utilities
